@@ -29,6 +29,15 @@ export const ContactSection: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.email || !formData.message) return;
+
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name || 'Visitor'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    
+    // Open default mail client with pre-filled details addressed to kendrew_koay@hotmail.com
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
     setFormSubmitted(true);
   };
 

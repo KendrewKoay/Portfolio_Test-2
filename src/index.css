@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
+  }
+
+  html[lang="zh"] {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+
+  body {
+    background-color: #050505;
+    color: #d6d3d1;
+    overflow-x: hidden;
+  }
+}
+
+/* Always force logo K to maintain its elegant Playfair Display italic font across all settings */
+.logo-k-italic {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+}
+
+/* English Playfair Serif Italic with fallback for Chinese */
+.font-serif-italic {
+  font-family: 'Playfair Display', 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
+  font-style: italic;
+}
+
+/* Special Chinese Serif display font (Non-italic, high aesthetic impact) */
+.font-zh-serif {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+  font-style: normal !important;
+  letter-spacing: 0.02em;
+}
+
+.font-zh-sans {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-style: normal !important;
+}
+
+/* When document is set to Chinese, disable italics and enforce non-slanted Chinese typography */
+html[lang="zh"] .font-serif-italic,
+html[lang="zh"] em,
+html[lang="zh"] i,
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] h4,
+.zh-no-italic {
+  font-style: normal !important;
+}
+
+html[lang="zh"] .font-serif-italic {
+  font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
+  font-style: normal !important;
+}
+
+/* Infinite Marquee Keyframe */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Dark Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}

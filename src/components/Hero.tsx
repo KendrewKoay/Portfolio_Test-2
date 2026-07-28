@@ -16,8 +16,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
       setImgSrc('profile.jpg');
     } else if (imgSrc === 'profile.jpg') {
       setImgSrc('/images/profile.jpg');
-    } else if (imgSrc === '/images/profile.jpg') {
-      setImgSrc('/images/profile.jpg');
     }
   };
 

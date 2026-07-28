@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
     } else if (imgSrc === 'profile.jpg') {
       setImgSrc('/images/profile.jpg');
     } else if (imgSrc === '/images/profile.jpg') {
-      setImgSrc('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80');
+      setImgSrc('/images/profile.jpg');
     }
   };
 

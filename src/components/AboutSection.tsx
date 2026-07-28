@@ -115,12 +115,22 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
           )}
 
           {activeTab === 'cv' && (
-            <div className={`p-4 rounded-2xl text-xs space-y-2 border animate-in fade-in duration-200 font-mono ${
+            <div className={`p-5 rounded-2xl text-xs space-y-3 border animate-in fade-in duration-200 ${
               isLight ? 'bg-stone-50 border-stone-200 text-stone-800' : 'bg-[#050505] border-white/10 text-stone-300'
             }`}>
-              <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg1}</strong> {t.about.cvDetails.sch1}</p>
-              <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg2}</strong> {t.about.cvDetails.sch2}</p>
-              <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.honorsTitle}</strong> {t.about.cvDetails.honorsDesc}</p>
+              <div className="space-y-1.5 font-mono">
+                <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg1}</strong> {t.about.cvDetails.sch1}</p>
+                <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg2}</strong> {t.about.cvDetails.sch2}</p>
+                {t.about.cvDetails.deg3 && (
+                  <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg3}</strong> {t.about.cvDetails.sch3}</p>
+                )}
+                {t.about.cvDetails.deg4 && (
+                  <p><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.deg4}</strong> {t.about.cvDetails.sch4}</p>
+                )}
+              </div>
+              <div className={`pt-2.5 border-t ${isLight ? 'border-stone-200' : 'border-white/10'}`}>
+                <p className="leading-relaxed"><strong className={isLight ? 'text-stone-900' : 'text-white'}>{t.about.cvDetails.honorsTitle}</strong> {t.about.cvDetails.honorsDesc}</p>
+              </div>
             </div>
           )}
         </div>

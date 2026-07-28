@@ -9,6 +9,17 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   const { theme, lang, t } = useApp();
   const isLight = theme === 'light';
+  const [imgSrc, setImgSrc] = React.useState('images/profile.jpg');
+
+  const handleImageError = () => {
+    if (imgSrc === 'images/profile.jpg') {
+      setImgSrc('profile.jpg');
+    } else if (imgSrc === 'profile.jpg') {
+      setImgSrc('/images/profile.jpg');
+    } else if (imgSrc === '/images/profile.jpg') {
+      setImgSrc('https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80');
+    }
+  };
 
   return (
     <section className="pt-8 pb-6 md:pt-12 md:pb-8" id="home">
@@ -85,8 +96,9 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
             isLight ? 'border-stone-300 bg-stone-100' : 'border-white/10 bg-[#080808]'
           }`}>
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80"
+              src={imgSrc}
               alt={t.hero.portraitName}
+              onError={handleImageError}
               className="w-full h-full object-cover object-center grayscale contrast-110 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
               referrerPolicy="no-referrer"
               id="hero-portrait-img"

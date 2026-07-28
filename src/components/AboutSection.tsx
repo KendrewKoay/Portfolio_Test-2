@@ -125,7 +125,24 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
           )}
         </div>
 
-        <div className="shrink-0 pt-2 lg:pt-0">
+        <div className="shrink-0 pt-2 lg:pt-0 flex flex-col items-start lg:items-end gap-5">
+          <div className={`w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border shadow-lg ${
+            isLight ? 'border-stone-300 bg-stone-100' : 'border-white/10 bg-[#121212]'
+          }`}>
+            <img
+              src="images/profile.jpg"
+              alt="Kendrew Koay Profile"
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (target.src.includes('images/profile.jpg')) {
+                  target.src = 'profile.jpg';
+                } else if (target.src.includes('profile.jpg')) {
+                  target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80';
+                }
+              }}
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
           <button
             type="button"
             onClick={onContactClick}

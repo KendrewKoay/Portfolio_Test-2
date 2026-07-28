@@ -16,32 +16,14 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, onSelectProj
 
   const categories: CategoryFilter[] = [
     'All',
-    'Typography',
-    'Identity',
-    'Education',
-    'Editorial',
-    'Installation',
-    'Sound',
-    'Branding',
-    'Research',
+    'Key Visual Design',
+    'Branding Design',
+    'Cultural & Creative Design',
+    'Other Design',
   ];
 
   const getCategoryLabel = (cat: CategoryFilter) => {
-    if (lang === 'zh') {
-      const mapping: Record<string, string> = {
-        All: '全部',
-        Typography: '字体排印',
-        Identity: '品牌形象',
-        Education: '教育革新',
-        Editorial: '书籍出版',
-        Installation: '空间装置',
-        Sound: '声音艺术',
-        Branding: '品牌视觉',
-        Research: '学术研究',
-      };
-      return mapping[cat] || cat;
-    }
-    return cat;
+    return t.projects.categories[cat] || cat;
   };
 
   const filteredProjects = useMemo(() => {

@@ -50,4 +50,4 @@ export interface ResearchItem {
   keyQuestionZh?: string;
 }
 
-export type CategoryFilter = 'All' | 'Typography' | 'Identity' | 'Education' | 'Editorial' | 'Installation' | 'Sound' | 'Research' | 'Branding';
+export type CategoryFilter = 'All' | 'Key Visual Design' | 'Branding Design' | 'Cultural & Creative Design' | 'Other Design';

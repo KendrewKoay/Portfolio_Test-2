@@ -165,7 +165,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
         <div className={`p-6 rounded-2xl border text-center ${
           isLight ? 'bg-white border-stone-200/90 shadow-2xs' : 'bg-[#080808] border-white/10'
         }`}>
-          <div className={`text-3xl font-serif-italic italic ${isLight ? 'text-stone-900' : 'text-white'}`}>25+</div>
+          <div className={`text-3xl font-serif-italic italic ${isLight ? 'text-stone-900' : 'text-white'}`}>9</div>
           <div className={`text-[10px] uppercase tracking-[0.25em] font-mono mt-1 ${isLight ? 'text-stone-500' : 'text-stone-500'}`}>
             {t.about.stats.exhibitions}
           </div>
@@ -173,7 +173,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
         <div className={`p-6 rounded-2xl border text-center ${
           isLight ? 'bg-white border-stone-200/90 shadow-2xs' : 'bg-[#080808] border-white/10'
         }`}>
-          <div className={`text-3xl font-serif-italic italic ${isLight ? 'text-stone-900' : 'text-white'}`}>14</div>
+          <div className={`text-3xl font-serif-italic italic ${isLight ? 'text-stone-900' : 'text-white'}`}>3</div>
           <div className={`text-[10px] uppercase tracking-[0.25em] font-mono mt-1 ${isLight ? 'text-stone-500' : 'text-stone-500'}`}>
             {t.about.stats.publications}
           </div>

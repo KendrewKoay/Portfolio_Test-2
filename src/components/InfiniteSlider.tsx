@@ -31,6 +31,13 @@ export const InfiniteSlider: React.FC = () => {
               <img
                 src={slide.url}
                 alt={slide.alt}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.failed) {
+                    target.dataset.failed = 'true';
+                    target.src = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center';
+                  }
+                }}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover/item:scale-105 opacity-90 group-hover/item:opacity-100"
                 loading="lazy"
               />

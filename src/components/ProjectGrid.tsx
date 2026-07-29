@@ -159,6 +159,13 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, onSelectProj
                   <img
                     src={project.image}
                     alt={displayTitle}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.failed) {
+                        target.dataset.failed = 'true';
+                        target.src = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center';
+                      }
+                    }}
                     className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
                     loading="lazy"
                   />

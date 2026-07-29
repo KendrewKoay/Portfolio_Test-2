@@ -97,6 +97,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <img
                 src={project.image}
                 alt={displayTitle}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.failed) {
+                    target.dataset.failed = 'true';
+                    target.src = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1000&h=700&fit=crop&crop=center';
+                  }
+                }}
                 className="w-full h-[280px] sm:h-[400px] object-cover opacity-95"
               />
             </div>
@@ -356,6 +363,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                     <img
                       src={imgUrl}
                       alt={`${displayTitle} artifact ${idx + 1}`}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.failed) {
+                          target.dataset.failed = 'true';
+                          target.src = 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1000&h=700&fit=crop&crop=center';
+                        }
+                      }}
                       className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300 opacity-95 hover:opacity-100"
                     />
                   </div>

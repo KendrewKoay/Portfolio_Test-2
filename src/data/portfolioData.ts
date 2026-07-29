@@ -46,9 +46,9 @@ export const PROJECTS: Project[] = [
     shortDescZh: '为“2026 设计知识生产与传播：跨学科期刊编辑国际会议”打造的主视觉形象设计。',
     longDesc: 'Key visual system engineered for the international academic conference on cross-disciplinary design journal editing, exploring how graphical typography and modular grids translate complex editorial discourse across global research institutions.',
     longDescZh: '为跨学科期刊编辑国际学术会议设计的主视觉系统，探索图形化排版与模块化网格如何将复杂的编辑学术语境转译至全球研究机构。',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center',
+    image: '/images/1785303551273.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1000&h=700&fit=crop&crop=center',
+      '/images/1785303551273.jpg',
       'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1000&h=700&fit=crop&crop=center',
     ],
     tags: ['Key Visual', 'Conference', 'Typography', 'Academic'],

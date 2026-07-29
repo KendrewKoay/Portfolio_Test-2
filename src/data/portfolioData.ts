@@ -7,7 +7,7 @@ export const SLIDER_IMAGES = [
     caption: 'Kendrew Koay (郭肯儒) - Doctoral Researcher & Designer',
   },
   {
-    url: '/images/1785303551273.jpg',
+    url: '/images/1785303551273.JPG',
     alt: 'Cross-Disciplinary Journal Editing Conference Key Visual',
     caption: '2026 Design Knowledge Production & Dissemination Key Visual',
   },
@@ -46,9 +46,9 @@ export const PROJECTS: Project[] = [
     shortDescZh: '为“2026 设计知识生产与传播：跨学科期刊编辑国际会议”打造的主视觉形象设计。',
     longDesc: 'Key visual system engineered for the international academic conference on cross-disciplinary design journal editing, exploring how graphical typography and modular grids translate complex editorial discourse across global research institutions.',
     longDescZh: '为跨学科期刊编辑国际学术会议设计的主视觉系统，探索图形化排版与模块化网格如何将复杂的编辑学术语境转译至全球研究机构。',
-    image: '/images/1785303551273.jpg',
+    image: '/images/1785303551273.JPG',
     gallery: [
-      '/images/1785303551273.jpg',
+      '/images/1785303551273.JPG',
       'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=1000&h=700&fit=crop&crop=center',
     ],
     tags: ['Key Visual', 'Conference', 'Typography', 'Academic'],

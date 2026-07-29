@@ -2,12 +2,12 @@ import { Project, TeachingExperience, ResearchItem } from '../types';
 
 export const SLIDER_IMAGES = [
   {
-    url: 'images/profile.jpg',
+    url: '/images/profile.jpg',
     alt: 'Kendrew Koay - Designer & Educator',
     caption: 'Kendrew Koay (郭肯儒) - Doctoral Researcher & Designer',
   },
   {
-    url: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center',
+    url: '/images/1785303551273.jpg',
     alt: 'Cross-Disciplinary Journal Editing Conference Key Visual',
     caption: '2026 Design Knowledge Production & Dissemination Key Visual',
   },

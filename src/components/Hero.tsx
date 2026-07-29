@@ -9,13 +9,13 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
   const { theme, lang, t } = useApp();
   const isLight = theme === 'light';
-  const [imgSrc, setImgSrc] = React.useState('images/profile.jpg');
+  const [imgSrc, setImgSrc] = React.useState('/images/profile.jpg');
 
   const handleImageError = () => {
-    if (imgSrc === 'images/profile.jpg') {
+    if (imgSrc === '/images/profile.jpg') {
+      setImgSrc('images/profile.jpg');
+    } else if (imgSrc === 'images/profile.jpg') {
       setImgSrc('profile.jpg');
-    } else if (imgSrc === 'profile.jpg') {
-      setImgSrc('/images/profile.jpg');
     }
   };
 

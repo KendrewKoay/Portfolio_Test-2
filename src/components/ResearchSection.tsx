@@ -98,6 +98,12 @@ export const ResearchSection: React.FC = () => {
                       alt={displayTitle}
                       className="w-full h-full object-cover opacity-85 hover:opacity-100 transition-all duration-500 hover:scale-105"
                       loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.src.includes('/images/academic-research-cover.jpg')) {
+                          target.src = '/images/academic-research-cover.jpg';
+                        }
+                      }}
                     />
                     <span className={`absolute top-3 left-3 text-[9px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full backdrop-blur-xs border ${
                       isLight

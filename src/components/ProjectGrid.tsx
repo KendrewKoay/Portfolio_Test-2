@@ -162,7 +162,10 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ projects, onSelectProj
                     onError={(e) => {
                       const target = e.currentTarget;
                       if (!target.dataset.failed) {
-                        target.dataset.failed = 'true';
+                        target.dataset.failed = '1';
+                        target.src = '/images/academic-research-cover.jpg';
+                      } else if (target.dataset.failed === '1') {
+                        target.dataset.failed = '2';
                         target.src = 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center';
                       }
                     }}
